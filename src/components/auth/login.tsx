@@ -26,9 +26,10 @@ function Login() {
         olddata["name"] != name ||
         olddata["password"] != password
       ) {
-        alert("Create your account");navigate("/register");
+        alert("Create your account");
+        navigate("/register");
       } else {
-        localStorage.setItem("id",olddata["name"]);
+        localStorage.setItem("id", olddata["name"]);
         navigate("/main");
       }
     }
@@ -44,7 +45,9 @@ function Login() {
           variant="standard"
           className="w-3/12"
           value={name}
-          onChange={(e) => {setusername(e.target.value);}}
+          onChange={(e) => {
+            setusername(e.target.value);
+          }}
           required
         />
       </div>
@@ -56,7 +59,9 @@ function Login() {
           variant="standard"
           className="w-3/12"
           value={email}
-          onChange={(e) => {setemail(e.target.value);}}
+          onChange={(e) => {
+            setemail(e.target.value);
+          }}
           required
         />
       </div>
@@ -68,7 +73,9 @@ function Login() {
           type="password"
           className="w-3/12"
           value={password}
-          onChange={(e) => {setpassword(e.target.value);}}
+          onChange={(e) => {
+            setpassword(e.target.value);
+          }}
           required
         />
       </div>

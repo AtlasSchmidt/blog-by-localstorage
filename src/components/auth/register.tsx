@@ -1,15 +1,13 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Register() {
-
   useEffect(() => {
-    if ( sessionStorage.getItem("isAuth") ) {
-      navigate('/main');
+    if (sessionStorage.getItem("isAuth")) {
+      navigate("/main");
     }
-    
   }, []);
   const navigate = useNavigate();
   const [name, setUsername] = React.useState("");
@@ -44,7 +42,6 @@ function Register() {
         localStorage.setItem("users", JSON.stringify(saveUser));
         alert("success");
         navigate("/login");
-        
       }
     }
   };
@@ -97,7 +94,9 @@ function Register() {
           variant="standard"
           className="w-3/12 "
           value={confirm}
-          onChange={(e) => {setConfirm(e.target.value); }}
+          onChange={(e) => {
+            setConfirm(e.target.value);
+          }}
           required
         />
       </div>
@@ -108,7 +107,6 @@ function Register() {
         >
           Sign Up
         </button>
-       
       </div>
     </form>
   );

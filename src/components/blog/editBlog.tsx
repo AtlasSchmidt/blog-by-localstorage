@@ -26,24 +26,22 @@ function EditBlog() {
 
       // const [blog,setblog]=useState([blogdata]);
       // setblog([...blog, blogdata]);
-  let blog:Array<any> = [];
-        blog = JSON.parse(localStorage.getItem("blog") || "{}");
-    if(!localStorage.blog){
-      blog =[];
-      blog.push(blogdata);
-      console.log("here:" ,blog);
+      let blog: Array<any> = [];
+      blog = JSON.parse(localStorage.getItem("blog") || "{}");
+      if (!localStorage.blog) {
+        blog = [];
+        blog.push(blogdata);
+        console.log("here:", blog);
+        localStorage.setItem("blog", JSON.stringify(blog));
+        navigate("/main");
+      } else {
+        console.log(blog);
+        blog.push(blogdata);
+        console.log("here:", blog);
         localStorage.setItem("blog", JSON.stringify(blog));
         navigate("/main");
       }
-    else{
-      console.log(blog);
-      blog.push(blogdata);
-      console.log("here:" ,blog);
-        localStorage.setItem("blog", JSON.stringify(blog));     
-      navigate("/main");
     }
-  }
-
   };
   return (
     <div className="flex justify-center py-[2%]">

@@ -14,11 +14,11 @@ function Main() {
   function handleIncrement(e: React.FormEvent) {
     setCount(count + 1);
   }
-  const Editblog = (e: React.FormEvent) => {  
-    const[k,setkey]=React.useState("");
+  const Editblog = (e: React.FormEvent) => {
+    const [k, setkey] = React.useState("");
     setkey(k);
-   
-    localStorage.setItem("blog",JSON.stringify(k));
+
+    localStorage.setItem("blog", JSON.stringify(k));
     console.log();
 
     // navigate("/editBlog");
@@ -59,11 +59,15 @@ function Main() {
                     className="hover:drop-shadow-xl delay-150 bg-blue-500 hover:w-[110%] block w-full h-full"
                   >
                     <img
-                      alt="blog photo"key={k}
+                      alt="blog photo"
+                      key={k}
                       src={blog.picture}
                       className="object-cover w-full max-h-40"
                     />
-                    <div key={k} className="w-full p-4 bg-white dark:bg-gray-800">
+                    <div
+                      key={k}
+                      className="w-full p-4 bg-white dark:bg-gray-800"
+                    >
                       <p className="mb-2 text-xl font-medium text-gray-800 dark:text-white">
                         {blog.title}
                       </p>
@@ -72,7 +76,10 @@ function Main() {
                       </p>
                       <div className="flex items-center justify-center mt-4">
                         <div className="flex flex-col justify-center ml-4 text-sm">
-                          <p key={k} className="text-gray-400 dark:text-gray-300">
+                          <p
+                            key={k}
+                            className="text-gray-400 dark:text-gray-300"
+                          >
                             product: {blog.date}
                           </p>
                         </div>
@@ -108,7 +115,7 @@ function Main() {
                       </svg>
                       <sup>+{count}</sup>
                     </div>
-                    <div key={k}  className="mx-5 flex" onClick={(Editblog)}>
+                    <div key={k} className="mx-5 flex" onClick={Editblog}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"

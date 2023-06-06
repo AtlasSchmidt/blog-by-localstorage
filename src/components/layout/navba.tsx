@@ -24,14 +24,14 @@ function navbar() {
           </a>
         </div>
         <div className="flex ml-[95%]">
-        <img
+          <img
             alt=""
             src="user.png"
             className=" object-cover w-8 h-8 rounded-xl"
           />
-        <p className="text-lg text-white mx-[50%]  xl:mx-[90%] sm:mx-[10%]">
-          {user}
-        </p>
+          <p className="text-lg text-white mx-[50%]  xl:mx-[90%] sm:mx-[10%]">
+            {user}
+          </p>
           <Link
             to="/"
             className="text-lg text-center  text-slate-300 decoration-none"
@@ -39,7 +39,6 @@ function navbar() {
             Logout
           </Link>
         </div>
-        
       </div>
     </nav>
   );
